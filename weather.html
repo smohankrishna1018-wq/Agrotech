@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroSense | Weather</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h2>AgroSense</h2>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="crops.html"><i class="fa-solid fa-leaf"></i> Crops</a></li>
+
+<li><a href="weather.html" class="active"><i class="fa-solid fa-cloud-sun"></i> Weather</a></li>
+
+<li><a href="irrigation.html"><i class="fa-solid fa-droplet"></i> Irrigation</a></li>
+
+<li><a href="disease.html"><i class="fa-solid fa-camera"></i> Disease Detection</a></li>
+
+<li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<header>
+
+<h1>Weather Dashboard</h1>
+
+<input type="text"
+placeholder="Search City">
+
+</header>
+
+<!-- Current Weather -->
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-temperature-three-quarters"></i>
+
+<h3>Temperature</h3>
+
+<h2>28°C</h2>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Humidity</h3>
+
+<h2>78%</h2>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-wind"></i>
+
+<h3>Wind Speed</h3>
+
+<h2>12 km/h</h2>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-cloud-rain"></i>
+
+<h3>Rain Chance</h3>
+
+<h2>65%</h2>
+
+</div>
+
+</div>
+
+<!-- Today's Weather -->
+
+<section class="panel">
+
+<h2>Today's Weather</h2>
+
+<div class="weather-details">
+
+<p>🌡 Temperature : 28°C</p>
+
+<p>☁ Condition : Cloudy</p>
+
+<p>💧 Humidity : 78%</p>
+
+<p>💨 Wind : 12 km/h</p>
+
+<p>🌧 Rain Probability : 65%</p>
+
+<p>🌅 Sunrise : 6:05 AM</p>
+
+<p>🌇 Sunset : 6:48 PM</p>
+
+</div>
+
+</section>
+<!-- 7-Day Forecast -->
+
+<section class="panel">
+
+<h2>7-Day Forecast</h2>
+
+<div class="forecast-grid">
+
+<div class="forecast-card">
+<h3>Mon</h3>
+<i class="fa-solid fa-cloud-sun"></i>
+<h2>29°C</h2>
+<p>Cloudy</p>
+</div>
+
+<div class="forecast-card">
+<h3>Tue</h3>
+<i class="fa-solid fa-cloud-rain"></i>
+<h2>27°C</h2>
+<p>Rain</p>
+</div>
+
+<div class="forecast-card">
+<h3>Wed</h3>
+<i class="fa-solid fa-sun"></i>
+<h2>31°C</h2>
+<p>Sunny</p>
+</div>
+
+<div class="forecast-card">
+<h3>Thu</h3>
+<i class="fa-solid fa-cloud-showers-heavy"></i>
+<h2>26°C</h2>
+<p>Heavy Rain</p>
+</div>
+
+<div class="forecast-card">
+<h3>Fri</h3>
+<i class="fa-solid fa-cloud"></i>
+<h2>28°C</h2>
+<p>Cloudy</p>
+</div>
+
+<div class="forecast-card">
+<h3>Sat</h3>
+<i class="fa-solid fa-cloud-sun-rain"></i>
+<h2>27°C</h2>
+<p>Light Rain</p>
+</div>
+
+<div class="forecast-card">
+<h3>Sun</h3>
+<i class="fa-solid fa-sun"></i>
+<h2>30°C</h2>
+<p>Sunny</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Weather Highlights -->
+
+<div class="dashboard-grid">
+
+<div class="panel">
+
+<h2>Weather Highlights</h2>
+
+<ul>
+
+<li>☀️ UV Index : 8 (High)</li>
+
+<li>🌫 Visibility : 10 km</li>
+
+<li>🌡 Feels Like : 30°C</li>
+
+<li>💨 Wind Direction : South-West</li>
+
+<li>🌧 Expected Rainfall : 24 mm</li>
+
+</ul>
+
+</div>
+
+
+<div class="panel">
+
+<h2>Air Quality</h2>
+
+<h1 style="color:#00ff66;">AQI 42</h1>
+
+<p>Good Air Quality</p>
+
+<p>No major health concerns.</p>
+
+</div>
+
+</div>
+
+
+<!-- Farming Alerts -->
+
+<section class="panel">
+
+<h2>Farming Alerts</h2>
+
+<div class="alert-box">
+
+<p>🌧 Heavy rainfall expected in the next 48 hours.</p>
+
+<p>🚜 Delay fertilizer application until rainfall reduces.</p>
+
+<p>💧 Reduce irrigation due to expected precipitation.</p>
+
+<p>🌾 Good conditions for paddy cultivation.</p>
+
+</div>
+
+</section>
+
+
+<!-- Weather Map -->
+
+<section class="panel">
+
+<h2>Weather Radar</h2>
+
+<div class="map-placeholder">
+
+<i class="fa-solid fa-map-location-dot fa-5x"></i>
+
+<p>
+
+Interactive Weather Map
+
+(API Integration Ready)
+
+</p>
+
+</div>
+
+</section>
+<!-- Rainfall & Temperature -->
+
+<div class="dashboard-grid">
+
+<div class="panel">
+
+<h2>Monthly Rainfall</h2>
+
+<canvas id="rainChart"></canvas>
+
+</div>
+
+<div class="panel">
+
+<h2>Temperature Trend</h2>
+
+<canvas id="tempChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- Farming Recommendations -->
+
+<section class="panel">
+
+<h2>Weather-Based Farming Advice</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-seedling fa-2x"></i>
+
+<h3>Paddy</h3>
+
+<p>
+Excellent weather for paddy cultivation.
+Maintain proper water level.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-droplet fa-2x"></i>
+
+<h3>Irrigation</h3>
+
+<p>
+Expected rainfall tomorrow.
+Reduce irrigation by 30%.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-cloud-rain fa-2x"></i>
+
+<h3>Rain Alert</h3>
+
+<p>
+Heavy rainfall likely within the next
+48 hours.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<hr>
+
+<p style="text-align:center;padding:20px;">
+
+© 2026 AgroSense | Smart Weather Monitoring
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+new Chart(document.getElementById('rainChart'),{
+
+type:'bar',
+
+data:{
+
+labels:['Jan','Feb','Mar','Apr','May','Jun','Jul'],
+
+datasets:[{
+
+label:'Rainfall (mm)',
+
+data:[15,20,30,60,110,240,320],
+
+backgroundColor:'#00c853'
+
+}]
+
+}
+
+});
+
+new Chart(document.getElementById('tempChart'),{
+
+type:'line',
+
+data:{
+
+labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+
+datasets:[{
+
+label:'Temperature (°C)',
+
+data:[28,29,30,27,26,28,29],
+
+borderColor:'#00ff66',
+
+fill:false,
+
+tension:0.4
+
+}]
+
+}
+
+});
+
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
