@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroSense | Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h2>AgroSense</h2>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="weather.html"><i class="fa-solid fa-cloud-sun"></i> Weather</a></li>
+
+<li><a href="crops.html"><i class="fa-solid fa-leaf"></i> Crops</a></li>
+
+<li><a href="irrigation.html"><i class="fa-solid fa-droplet"></i> Irrigation</a></li>
+
+<li><a href="disease.html"><i class="fa-solid fa-camera"></i> Disease Detection</a></li>
+
+<li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<header>
+
+<h1>Dashboard</h1>
+
+<div class="profile">
+
+<i class="fa-solid fa-user-circle"></i>
+
+<span>Welcome, Farmer</span>
+
+</div>
+
+</header>
+
+<!-- Summary Cards -->
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+<h3>Weather</h3>
+
+<h2>28°C</h2>
+
+<p>Cloudy</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Soil Moisture</h3>
+
+<h2>68%</h2>
+
+<p>Good</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-water"></i>
+
+<h3>Water Tank</h3>
+
+<h2>82%</h2>
+
+<p>Available</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h3>Recommended Crop</h3>
+
+<h2>Paddy</h2>
+
+<p>Current Season</p>
+
+</div>
+
+</div>
+<!-- Weather & Irrigation -->
+
+<div class="dashboard-grid">
+
+    <!-- Live Weather -->
+
+    <div class="panel">
+
+        <h2><i class="fa-solid fa-cloud-sun"></i> Live Weather</h2>
+
+        <div class="weather-box">
+
+            <h1>28°C</h1>
+
+            <p>Cloudy</p>
+
+            <p>Humidity : 78%</p>
+
+            <p>Wind Speed : 12 km/h</p>
+
+            <p>Rain Chance : 65%</p>
+
+        </div>
+
+    </div>
+
+    <!-- Irrigation -->
+
+    <div class="panel">
+
+        <h2><i class="fa-solid fa-droplet"></i> Irrigation Status</h2>
+
+        <div class="progress">
+
+            <div class="progress-bar" style="width:75%">
+                75%
+            </div>
+
+        </div>
+
+        <p>Next Irrigation</p>
+
+        <h3>Tomorrow - 6:00 AM</h3>
+
+    </div>
+
+</div>
+
+
+<!-- Crop Status -->
+
+<div class="dashboard-grid
