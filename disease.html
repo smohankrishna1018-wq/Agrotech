@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroSense | AI Disease Detection</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h2>AgroSense</h2>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="crops.html"><i class="fa-solid fa-leaf"></i> Crops</a></li>
+
+<li><a href="weather.html"><i class="fa-solid fa-cloud-sun"></i> Weather</a></li>
+
+<li><a href="irrigation.html"><i class="fa-solid fa-droplet"></i> Irrigation</a></li>
+
+<li><a href="disease.html" class="active"><i class="fa-solid fa-camera"></i> Disease Detection</a></li>
+
+<li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>AI Plant Disease Detection</h1>
+
+<p>
+
+Upload a plant leaf image to identify possible diseases.
+
+</p>
+
+</header>
+
+<!-- Upload Area -->
+
+<section class="panel">
+
+<h2>Upload Leaf Image</h2>
+
+<div class="upload-box">
+
+<i class="fa-solid fa-cloud-arrow-up fa-4x"></i>
+
+<h3>Drag & Drop Image</h3>
+
+<p>or</p>
+
+<input type="file" id="imageUpload" accept="image/*">
+
+<br><br>
+
+<button class="login-btn">
+
+Analyze Image
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Preview -->
+
+<section class="panel">
+
+<h2>Image Preview</h2>
+
+<div style="text-align:center;">
+
+<img
+
+id="preview"
+
+src="assets/images/leaf-placeholder.png"
+
+alt="Preview"
+
+style="max-width:300px;border-radius:15px;">
+
+</div>
+
+</section>
+
+<!-- Result -->
+
+<section class="panel">
+
+<h2>Prediction Result</h2>
+
+<div class="dashboard-grid">
+
+<div class="card">
+
+<h3>Disease</h3>
+
+<h2>Healthy Leaf</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Confidence</h3>
+
+<h2>98%</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Severity</h3>
+
+<h2>Low</h2>
+
+</div>
+
+</div>
+
+</section>
+<!-- Treatment Recommendations -->
+
+<section class="panel">
+
+<h2>Treatment Recommendations</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-spray-can"></i>
+
+<h3>Fungicide</h3>
+
+<p>
+Apply a suitable fungicide as recommended by local agricultural experts if a fungal disease is confirmed.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h3>Healthy Plants</h3>
+
+<p>
+Remove infected leaves and improve field sanitation to reduce disease spread.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Irrigation</h3>
+
+<p>
+Avoid excessive watering and ensure proper drainage around the crop.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Common Diseases -->
+
+<section class="panel">
+
+<h2>Common Crop Diseases</h2>
+
+<table>
+
+<tr>
+
+<th>Crop</th>
+
+<th>Disease</th>
+
+<th>Cause</th>
+
+</tr>
+
+<tr>
+
+<td>Paddy</td>
+
+<td>Blast</td>
+
+<td>Fungus</td>
+
+</tr>
+
+<tr>
+
+<td>Tomato</td>
+
+<td>Early Blight</td>
+
+<td>Fungus</td>
+
+</tr>
+
+<tr>
+
+<td>Chilli</td>
+
+<td>Leaf Curl</td>
+
+<td>Virus</td>
+
+</tr>
+
+<tr>
+
+<td>Sugarcane</td>
+
+<td>Red Rot</td>
+
+<td>Fungus</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- Prevention Tips -->
+
+<section class="panel">
+
+<h2>Prevention Tips</h2>
+
+<ul>
+
+<li>🌱 Use certified disease-free seeds.</li>
+
+<li>💧 Avoid overwatering crops.</li>
+
+<li>🌾 Maintain proper spacing between plants.</li>
+
+<li>🦠 Inspect fields regularly for early disease signs.</li>
+
+<li>🚜 Rotate crops to reduce disease build-up.</li>
+
+</ul>
+
+</section>
+
+<!-- Download Report -->
+
+<section class="panel">
+
+<h2>Diagnosis Report</h2>
+
+<button onclick="downloadReport()">
+
+<i class="fa-solid fa-download"></i>
+
+Download Report
+
+</button>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<hr>
+
+<p style="text-align:center;padding:20px;">
+
+© 2026 AgroSense | AI Disease Detection
+
+</p>
+
+</footer>
+
+</div>
+
+<script>
+
+const upload=document.getElementById("imageUpload");
+
+const preview=document.getElementById("preview");
+
+upload.addEventListener("change",function(){
+
+const file=this.files[0];
+
+if(file){
+
+preview.src=URL.createObjectURL(file);
+
+}
+
+});
+
+function downloadReport(){
+
+alert("Report download feature will be available after AI analysis integration.");
+
+}
+
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
