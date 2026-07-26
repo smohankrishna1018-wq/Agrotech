@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroSense | Smart Irrigation</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h2>AgroSense</h2>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="crops.html"><i class="fa-solid fa-leaf"></i> Crops</a></li>
+
+<li><a href="weather.html"><i class="fa-solid fa-cloud-sun"></i> Weather</a></li>
+
+<li><a href="irrigation.html" class="active"><i class="fa-solid fa-droplet"></i> Irrigation</a></li>
+
+<li><a href="disease.html"><i class="fa-solid fa-camera"></i> Disease Detection</a></li>
+
+<li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Smart Irrigation Calculator</h1>
+
+<p>Calculate the estimated water requirement for your crop.</p>
+
+</header>
+
+<div class="dashboard-grid">
+
+<div class="panel">
+
+<h2>Water Calculator</h2>
+
+<form id="irrigationForm">
+
+<label>Select Crop</label>
+
+<select id="crop">
+
+<option value="1200">Paddy</option>
+
+<option value="2000">Sugarcane</option>
+
+<option value="500">Tomato</option>
+
+<option value="700">Chilli</option>
+
+</select>
+
+<label>Farm Area (Acres)</label>
+
+<input
+type="number"
+id="area"
+placeholder="Enter farm area"
+required>
+
+<button
+type="button"
+onclick="calculateWater()">
+
+Calculate
+
+</button>
+
+</form>
+
+</div>
+
+<div class="panel">
+
+<h2>Estimated Requirement</h2>
+
+<h1 id="result">0 Litres</h1>
+
+<p>Water required for one irrigation cycle.</p>
+
+</div>
+
+</div>
+
+<!-- Soil Moisture -->
+
+<section class="panel">
+
+<h2>Soil Moisture</h2>
+
+<div class="progress">
+
+<div class="progress-bar" style="width:68%">
+
+68%
+
+</div>
+
+</div>
+
+<p>
+
+Current soil moisture is adequate.
+
+Next irrigation is recommended after 2 days.
+
+</p>
+
+</section>
+
+<!-- Water Tank -->
+
+<section class="panel">
+
+<h2>Farm Water Storage</h2>
+
+<div class="dashboard-grid">
+
+<div class="card">
+
+<i class="fa-solid fa-water"></i>
+
+<h3>Tank Level</h3>
+
+<h1>82%</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Available Water</h3>
+
+<h1>1.8 Million L</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<h3>Next Refill</h3>
+
+<h1>5 Days</h1>
+
+</div>
+
+</div>
+
+</section>
+<!-- Irrigation Schedule -->
+
+<section class="panel">
+
+<h2>Irrigation Schedule</h2>
+
+<table>
+
+<tr>
+<th>Crop</th>
+<th>Frequency</th>
+<th>Best Time</th>
+</tr>
+
+<tr>
+<td>Paddy</td>
+<td>Every 2-3 Days</td>
+<td>Morning</td>
+</tr>
+
+<tr>
+<td>Sugarcane</td>
+<td>Every 5-7 Days</td>
+<td>Morning / Evening</td>
+</tr>
+
+<tr>
+<td>Tomato</td>
+<td>Every 3 Days</td>
+<td>Morning</td>
+</tr>
+
+<tr>
+<td>Chilli</td>
+<td>Every 4 Days</td>
+<td>Evening</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- Water Saving Tips -->
+
+<section class="panel">
+
+<h2>Smart Water Saving Tips</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Drip Irrigation</h3>
+
+<p>
+Reduces water usage by up to 50%.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-cloud-rain"></i>
+
+<h3>Rainwater Harvesting</h3>
+
+<p>
+Store rainwater for irrigation during dry periods.
+</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h3>Soil Moisture Monitoring</h3>
+
+<p>
+Water crops only when required.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Water Usage Chart -->
+
+<section class="panel">
+
+<h2>Weekly Water Usage</h2>
+
+<canvas id="waterChart"></canvas>
+
+</section>
+
+
+<!-- Irrigation Alerts -->
+
+<section class="panel">
+
+<h2>Smart Alerts</h2>
+
+<ul>
+
+<li>💧 Soil moisture is adequate today.</li>
+
+<li>🌧 Rain expected tomorrow — reduce irrigation.</li>
+
+<li>🌾 Paddy field water level is normal.</li>
+
+<li>🚜 Irrigation pump maintenance due in 7 days.</li>
+
+</ul>
+
+</section>
+<!-- Footer -->
+
+<footer>
+
+<hr>
+
+<p style="text-align:center;padding:20px;">
+
+© 2026 AgroSense | Smart Irrigation System
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+// Water Usage Chart
+
+const waterCtx = document.getElementById("waterChart");
+
+new Chart(waterCtx,{
+
+type:'bar',
+
+data:{
+
+labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+
+datasets:[{
+
+label:'Water Usage (Litres)',
+
+data:[850,920,780,1100,980,870,940],
+
+backgroundColor:'#00c853',
+
+borderRadius:8
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+labels:{
+
+color:'white'
+
+}
+
+}
+
+},
+
+scales:{
+
+x:{
+
+ticks:{color:'white'},
+
+grid:{color:'#333'}
+
+},
+
+y:{
+
+ticks:{color:'white'},
+
+grid:{color:'#333'}
+
+}
+
+}
+
+}
+
+});
+
+
+// Irrigation Calculator
+
+function calculateWater(){
+
+let crop=document.getElementById("crop").value;
+
+let area=document.getElementById("area").value;
+
+if(area==="" || area<=0){
+
+alert("Please enter a valid farm area.");
+
+return;
+
+}
+
+let total=crop*area;
+
+document.getElementById("result").innerHTML=
+
+total.toLocaleString()+" Litres";
+
+}
+
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
