@@ -1,0 +1,297 @@
+/* ==========================
+   AgroSense Login Styles
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#050505,#111,#0b3d0b);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:#fff;
+
+}
+
+.container{
+
+width:100%;
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+
+}
+
+/* Left Side */
+
+.left{
+
+background:linear-gradient(135deg,#0b0b0b,#0f1f0f);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:60px;
+text-align:center;
+
+}
+
+.left h1{
+
+font-size:48px;
+margin-bottom:20px;
+color:#00ff66;
+
+}
+
+.left p{
+
+font-size:18px;
+line-height:1.8;
+color:#cccccc;
+margin-bottom:30px;
+
+}
+
+.left img{
+
+width:80%;
+max-width:420px;
+animation:float 5s ease-in-out infinite;
+
+}
+
+/* Right Side */
+
+.right{
+
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+
+}
+
+.login-box{
+
+width:420px;
+background:rgba(20,20,20,.95);
+padding:40px;
+border-radius:20px;
+border:1px solid rgba(0,255,102,.25);
+backdrop-filter:blur(10px);
+box-shadow:0 20px 50px rgba(0,255,102,.15);
+
+}
+
+.logo{
+
+text-align:center;
+margin-bottom:30px;
+
+}
+
+.logo i{
+
+font-size:55px;
+color:#00ff66;
+
+}
+
+.logo h2{
+
+margin-top:10px;
+font-size:30px;
+
+}
+
+.login-box h3{
+
+text-align:center;
+margin-bottom:25px;
+
+}
+
+/* Inputs */
+
+.input-box{
+
+position:relative;
+margin-bottom:20px;
+
+}
+
+.input-box input{
+
+width:100%;
+padding:14px 45px;
+background:#111;
+border:1px solid #333;
+border-radius:10px;
+color:#fff;
+font-size:15px;
+transition:.3s;
+
+}
+
+.input-box input:focus{
+
+border-color:#00ff66;
+box-shadow:0 0 12px rgba(0,255,102,.3);
+
+}
+
+.input-box i:first-child{
+
+position:absolute;
+left:15px;
+top:50%;
+transform:translateY(-50%);
+color:#00ff66;
+
+}
+
+.toggle-password{
+
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+color:#888;
+
+}
+
+/* Options */
+
+.options{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+margin-bottom:20px;
+
+}
+
+.options a{
+
+color:#00ff66;
+
+}
+
+/* Button */
+
+.login-btn{
+
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#00c853;
+color:#fff;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.login-btn:hover{
+
+background:#00e676;
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,255,102,.35);
+
+}
+
+/* Register */
+
+.register{
+
+margin-top:20px;
+text-align:center;
+
+}
+
+.register a{
+
+color:#00ff66;
+font-weight:600;
+
+}
+
+/* Terms */
+
+.terms{
+
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+font-size:14px;
+
+}
+
+.terms input{
+
+width:auto;
+
+}
+
+/* Animation */
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.left{
+
+display:none;
+
+}
+
+.right{
+
+padding:20px;
+
+}
+
+.login-box{
+
+width:100%;
+max-width:420px;
+
+}
+
+}
