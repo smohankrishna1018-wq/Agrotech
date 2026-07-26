@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroSense | Crops</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h2>AgroSense</h2>
+
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="crops.html" class="active"><i class="fa-solid fa-leaf"></i> Crops</a></li>
+
+<li><a href="weather.html"><i class="fa-solid fa-cloud"></i> Weather</a></li>
+
+<li><a href="irrigation.html"><i class="fa-solid fa-droplet"></i> Irrigation</a></li>
+
+<li><a href="disease.html"><i class="fa-solid fa-camera"></i> Disease Detection</a></li>
+
+<li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Crop Information Center</h1>
+
+<input
+type="text"
+id="searchCrop"
+placeholder="Search crops...">
+
+</header>
+
+<section class="crop-grid">
+
+<div class="crop-card">
+
+<img src="assets/images/paddy.jpg" alt="Paddy">
+
+<h2>Paddy</h2>
+
+<p>Rice cultivation guide.</p>
+
+<a href="paddy.html">View Details</a>
+
+</div>
+
+<div class="crop-card">
+
+<img src="assets/images/sugarcane.jpg" alt="Sugarcane">
+
+<h2>Sugarcane</h2>
+
+<p>Complete sugarcane farming guide.</p>
+
+<a href="sugarcane.html">View Details</a>
+
+</div>
+
+<div class="crop-card">
+
+<img src="assets/images/tomato.jpg" alt="Tomato">
+
+<h2>Tomato</h2>
+
+<p>Modern tomato cultivation.</p>
+
+<a href="tomato.html">View Details</a>
+
+</div>
+
+<div class="crop-card">
+
+<img src="assets/images/chilli.jpg" alt="Chilli">
+
+<h2>Chilli</h2>
+
+<p>High-yield chilli farming guide.</p>
+
+<a href="chilli.html">View Details</a>
+
+</div>
+
+</section>
+<!-- Crop Comparison -->
+
+<section class="panel">
+
+<h2>Crop Comparison</h2>
+
+<table>
+
+<tr>
+
+<th>Crop</th>
+<th>Duration</th>
+<th>Water Need</th>
+<th>Profit</th>
+
+</tr>
+
+<tr>
+
+<td>Paddy</td>
+<td>120-150 Days</td>
+<td>High</td>
+<td>★★★★☆</td>
+
+</tr>
+
+<tr>
+
+<td>Sugarcane</td>
+<td>10-12 Months</td>
+<td>Very High</td>
+<td>★★★★★</td>
+
+</tr>
+
+<tr>
+
+<td>Tomato</td>
+<td>90-120 Days</td>
+<td>Medium</td>
+<td>★★★★☆</td>
+
+</tr>
+
+<tr>
+
+<td>Chilli</td>
+<td>120-180 Days</td>
+<td>Medium</td>
+<td>★★★★★</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- Recommended This Season -->
+
+<section class="panel">
+
+<h2>Recommended Crops</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-seedling"></i>
+
+<h3>Paddy</h3>
+
+<p>Best for monsoon season.</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-pepper-hot"></i>
+
+<h3>Chilli</h3>
+
+<p>Suitable for warm climates.</p>
+
+</div>
+
+<div class="recommend-card">
+
+<i class="fa-solid fa-carrot"></i>
+
+<h3>Tomato</h3>
+
+<p>High market demand.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Water Requirement -->
+
+<section class="panel">
+
+<h2>Daily Water Requirement</h2>
+
+<table>
+
+<tr>
+
+<th>Crop</th>
+
+<th>Water Needed</th>
+
+</tr>
+
+<tr>
+
+<td>Paddy</td>
+
+<td>1200–1500 mm/Season</td>
+
+</tr>
+
+<tr>
+
+<td>Sugarcane</td>
+
+<td>1500–2500 mm/Season</td>
+
+</tr>
+
+<tr>
+
+<td>Tomato</td>
+
+<td>400–600 mm/Season</td>
+
+</tr>
+
+<tr>
+
+<td>Chilli</td>
+
+<td>600–800 mm/Season</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- Fertilizer Schedule -->
+
+<section class="panel">
+
+<h2>Fertilizer Schedule</h2>
+
+<ul>
+
+<li>🌱 Paddy - Urea, DAP, Potash</li>
+
+<li>🌾 Sugarcane - FYM, Urea, Potash</li>
+
+<li>🍅 Tomato - Compost, NPK</li>
+
+<li>🌶️ Chilli - Organic Compost + NPK</li>
+
+</ul>
+
+</section>
+<!-- Harvest Calendar -->
+
+<section class="panel">
+
+<h2>Harvest Calendar</h2>
+
+<table>
+
+<tr>
+<th>Crop</th>
+<th>Harvest Time</th>
+</tr>
+
+<tr>
+<td>Paddy</td>
+<td>October - November</td>
+</tr>
+
+<tr>
+<td>Sugarcane</td>
+<td>10-12 Months After Planting</td>
+</tr>
+
+<tr>
+<td>Tomato</td>
+<td>75-90 Days After Planting</td>
+</tr>
+
+<tr>
+<td>Chilli</td>
+<td>90-120 Days After Planting</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- Estimated Profit -->
+
+<section class="panel">
+
+<h2>Estimated Profit Potential</h2>
+
+<div class="recommend-grid">
+
+<div class="recommend-card">
+
+<h3>Paddy</h3>
+
+<h1>★★★★☆</h1>
+
+<p>Stable income with irrigation support.</p>
+
+</div>
+
+<div class="recommend-card">
+
+<h3>Sugarcane</h3>
+
+<h1>★★★★★</h1>
+
+<p>High yield and good market value.</p>
+
+</div>
+
+<div class="recommend-card">
+
+<h3>Tomato</h3>
+
+<h1>★★★★☆</h1>
+
+<p>High demand but price fluctuates.</p>
+
+</div>
+
+<div class="recommend-card">
+
+<h3>Chilli</h3>
+
+<h1>★★★★★</h1>
+
+<p>Excellent returns with proper disease management.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Farming Tips -->
+
+<section class="panel">
+
+<h2>Smart Farming Tips</h2>
+
+<ul>
+
+<li>💧 Irrigate based on soil moisture, not just a fixed schedule.</li>
+
+<li>🌦️ Check the weather forecast before applying fertilizers.</li>
+
+<li>🌱 Use certified, high-quality seeds.</li>
+
+<li>🦠 Inspect crops regularly for pests and diseases.</li>
+
+<li>🌾 Rotate crops to improve soil fertility and reduce pest problems.</li>
+
+</ul>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+<hr>
+
+<p style="text-align:center;padding:20px;">
+
+© 2026 AgroSense | Smart Agriculture Platform
+
+</p>
+
+</footer>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
