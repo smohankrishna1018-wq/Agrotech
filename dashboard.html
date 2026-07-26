@@ -180,3 +180,196 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <!-- Crop Status -->
 
 <div class="dashboard-grid
+<!-- Farming Calendar -->
+
+<section class="panel">
+
+<h2><i class="fa-solid fa-calendar-days"></i> Farming Calendar</h2>
+
+<table>
+
+<tr>
+<th>Month</th>
+<th>Activity</th>
+</tr>
+
+<tr>
+<td>June - July</td>
+<td>Paddy Sowing</td>
+</tr>
+
+<tr>
+<td>August</td>
+<td>Fertilizer Application</td>
+</tr>
+
+<tr>
+<td>September</td>
+<td>Weed Management</td>
+</tr>
+
+<tr>
+<td>October</td>
+<td>Pest Monitoring</td>
+</tr>
+
+<tr>
+<td>November</td>
+<td>Harvest Preparation</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- Government Schemes -->
+
+<section class="dashboard-grid">
+
+<div class="panel">
+
+<h2>Government Schemes</h2>
+
+<ul>
+
+<li>PM-KISAN</li>
+
+<li>PM Fasal Bima Yojana</li>
+
+<li>Soil Health Card Scheme</li>
+
+<li>Kisan Credit Card</li>
+
+</ul>
+
+</div>
+
+
+<div class="panel">
+
+<h2>Market Prices</h2>
+
+<table>
+
+<tr>
+<th>Crop</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>Paddy</td>
+<td>₹2,300 / Quintal</td>
+</tr>
+
+<tr>
+<td>Tomato</td>
+<td>₹1,850 / Quintal</td>
+</tr>
+
+<tr>
+<td>Sugarcane</td>
+<td>₹340 / Quintal</td>
+</tr>
+
+<tr>
+<td>Chilli</td>
+<td>₹8,500 / Quintal</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+© 2026 AgroSense | Smart Agriculture Platform
+
+</p>
+
+</footer>
+
+</div>
+
+<script>
+
+const ctx=document.getElementById('farmChart');
+
+new Chart(ctx,{
+
+type:'line',
+
+data:{
+
+labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
+
+datasets:[{
+
+label:'Water Usage',
+
+data:[45,55,40,70,65,50,60],
+
+borderColor:'#00ff66',
+
+backgroundColor:'rgba(0,255,100,0.2)',
+
+fill:true,
+
+tension:0.4
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+labels:{
+
+color:'white'
+
+}
+
+}
+
+},
+
+scales:{
+
+x:{
+
+ticks:{color:'white'}
+
+},
+
+y:{
+
+ticks:{color:'white'}
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
